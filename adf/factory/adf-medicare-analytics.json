@@ -1,0 +1,15 @@
+{
+	"name": "adf-medicare-analytics",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "775e8c76-983b-4d23-8ae0-1e1098a28f4c",
+		"tenantId": "77a7a123-84ab-4ba6-ae30-c60b5675bdfa"
+	}
+}

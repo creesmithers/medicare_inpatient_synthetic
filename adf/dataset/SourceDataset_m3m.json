@@ -1,0 +1,775 @@
+{
+	"name": "SourceDataset_m3m",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blob_medicare",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileName": {
+				"type": "string",
+				"defaultValue": "beneficiary_2015.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().fileName",
+					"type": "Expression"
+				},
+				"container": "medicare"
+			},
+			"columnDelimiter": "|",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "BENE_ID",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CODE",
+				"type": "String"
+			},
+			{
+				"name": "COUNTY_CD",
+				"type": "String"
+			},
+			{
+				"name": "ZIP_CD",
+				"type": "String"
+			},
+			{
+				"name": "BENE_BIRTH_DT",
+				"type": "String"
+			},
+			{
+				"name": "SEX_IDENT_CD",
+				"type": "String"
+			},
+			{
+				"name": "BENE_RACE_CD",
+				"type": "String"
+			},
+			{
+				"name": "ENTLMT_RSN_ORIG",
+				"type": "String"
+			},
+			{
+				"name": "ENTLMT_RSN_CURR",
+				"type": "String"
+			},
+			{
+				"name": "ESRD_IND",
+				"type": "String"
+			},
+			{
+				"name": "BENE_PTA_TRMNTN_CD",
+				"type": "String"
+			},
+			{
+				"name": "BENE_PTB_TRMNTN_CD",
+				"type": "String"
+			},
+			{
+				"name": "BENE_DEATH_DT",
+				"type": "String"
+			},
+			{
+				"name": "BENE_ENROLLMT_REF_YR",
+				"type": "String"
+			},
+			{
+				"name": "BENE_HI_CVRAGE_TOT_MONS",
+				"type": "String"
+			},
+			{
+				"name": "BENE_SMI_CVRAGE_TOT_MONS",
+				"type": "String"
+			},
+			{
+				"name": "BENE_STATE_BUYIN_TOT_MONS",
+				"type": "String"
+			},
+			{
+				"name": "BENE_HMO_CVRAGE_TOT_MONS",
+				"type": "String"
+			},
+			{
+				"name": "RDS_CVRG_MONS",
+				"type": "String"
+			},
+			{
+				"name": "ENRL_SRC",
+				"type": "String"
+			},
+			{
+				"name": "SAMPLE_GROUP",
+				"type": "String"
+			},
+			{
+				"name": "ENHANCED_FIVE_PERCENT_FLAG",
+				"type": "String"
+			},
+			{
+				"name": "CRNT_BIC_CD",
+				"type": "String"
+			},
+			{
+				"name": "AGE_AT_END_REF_YR",
+				"type": "String"
+			},
+			{
+				"name": "COVSTART",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_ELGBL_MONS",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_01",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_02",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_03",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_04",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_05",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_06",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_07",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_08",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_09",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_10",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_11",
+				"type": "String"
+			},
+			{
+				"name": "STATE_CNTY_FIPS_CD_12",
+				"type": "String"
+			},
+			{
+				"name": "VALID_DEATH_DT_SW",
+				"type": "String"
+			},
+			{
+				"name": "RTI_RACE_CD",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_01",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_02",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_03",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_04",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_05",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_06",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_07",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_08",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_09",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_10",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_11",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_STATUS_CODE_12",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PLAN_CVRG_MONS",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_01",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_02",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_03",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_04",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_05",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_06",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_07",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_08",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_09",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_10",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_11",
+				"type": "String"
+			},
+			{
+				"name": "MDCR_ENTLMT_BUYIN_IND_12",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_01",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_02",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_03",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_04",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_05",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_06",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_07",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_08",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_09",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_10",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_11",
+				"type": "String"
+			},
+			{
+				"name": "HMO_IND_12",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_01",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_02",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_03",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_04",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_05",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_06",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_07",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_08",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_09",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_10",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_11",
+				"type": "String"
+			},
+			{
+				"name": "PTC_CNTRCT_ID_12",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_01",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_02",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_03",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_04",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_05",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_06",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_07",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_08",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_09",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_10",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_11",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PBP_ID_12",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_01",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_02",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_03",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_04",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_05",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_06",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_07",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_08",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_09",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_10",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_11",
+				"type": "String"
+			},
+			{
+				"name": "PTC_PLAN_TYPE_CD_12",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_01",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_02",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_03",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_04",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_05",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_06",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_07",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_08",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_09",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_10",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_11",
+				"type": "String"
+			},
+			{
+				"name": "PTD_CNTRCT_ID_12",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_01",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_02",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_03",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_04",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_05",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_06",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_07",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_08",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_09",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_10",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_11",
+				"type": "String"
+			},
+			{
+				"name": "PTD_PBP_ID_12",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_01",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_02",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_03",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_04",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_05",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_06",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_07",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_08",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_09",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_10",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_11",
+				"type": "String"
+			},
+			{
+				"name": "PTD_SGMT_ID_12",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_01",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_02",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_03",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_04",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_05",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_06",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_07",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_08",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_09",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_10",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_11",
+				"type": "String"
+			},
+			{
+				"name": "RDS_IND_12",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_01",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_02",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_03",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_04",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_05",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_06",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_07",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_08",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_09",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_10",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_11",
+				"type": "String"
+			},
+			{
+				"name": "DUAL_STUS_CD_12",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_01",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_02",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_03",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_04",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_05",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_06",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_07",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_08",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_09",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_10",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_11",
+				"type": "String"
+			},
+			{
+				"name": "CST_SHR_GRP_CD_12",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
