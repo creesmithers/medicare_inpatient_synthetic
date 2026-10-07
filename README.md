@@ -31,3 +31,24 @@ CMS Synthetic Medicare Data
        Azure SQL
             ↓
          Power BI
+```
+## SQL Analysis
+I used SQL to turn the ingested talbes into an analysis-ready dataset. 
+
+Some of the main transformations included: 
+- Combining beneficiary files from multiple years using UNION ALL
+- Joinng beneficiary information to inpatient claims
+- Converting dates to appropriate data types
+- Calculating claim-level payment and utilization measures
+- Checking for potential duplicates, inconsistent values, outliers, and incorrect values (such as claims ending before they began.)
+
+I used CTEs to keep the transformation steps organized and easier to validate.
+
+## Data Source
+The project uses the CMS Synthetic Medicare Enrollment, Fee-for-Service Claims, and Prescription Drug Event Data.
+
+The data is synthetic and is used for portfolio and analytical practice purposes.
+
+
+Cree Smithers
+Data Analytics \\ SQL \\ Power BI \\ Azure Data Factory
