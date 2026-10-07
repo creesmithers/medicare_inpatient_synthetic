@@ -51,4 +51,5 @@ The data is synthetic and is used for portfolio and analytical practice purposes
 
 ## Author
 Cree Smithers
+
 Data Analytics \\ SQL \\ Power BI \\ Azure Data Factory
